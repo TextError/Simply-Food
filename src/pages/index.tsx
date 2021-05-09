@@ -1,9 +1,11 @@
 import React from 'react';
 
+import Layout from '../layout/Layout';
+
 const Home: React.FC = () => (
-  <div>
-    hello world
-  </div>
+  <Layout>
+    <div>home</div>
+  </Layout>
 );
 
 export default Home;
