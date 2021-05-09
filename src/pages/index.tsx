@@ -1,10 +1,9 @@
+import React from 'react';
 
-const index: React.FC = () => {
-  return (
-    <div>
-      hello world
-    </div>
-  )
-}
+const Home: React.FC = () => (
+  <div>
+    hello world
+  </div>
+);
 
-export default index;
+export default Home;
