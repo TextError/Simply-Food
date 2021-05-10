@@ -1,11 +1,11 @@
 import React from 'react';
-// Material-UI
+
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/styles';
 import { MuiTheme } from '../material-ui/theme';
-// Styled-components
+
 import Base from '../styled-components/Base';
-// Redux
+
 import { Provider } from 'react-redux';
 import { persistor, store } from '../redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
