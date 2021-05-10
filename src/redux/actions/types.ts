@@ -1,0 +1,4 @@
+export enum NUMBER {
+  INCREMENT = 'INCREMENT',
+  DECREMENT = 'DECREMENT'
+};
