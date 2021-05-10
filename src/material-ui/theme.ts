@@ -1,13 +1,15 @@
 import { createMuiTheme } from "@material-ui/core";
 import { green } from "@material-ui/core/colors";
 
-const theme = createMuiTheme({
+export const theme = {
+  primary: {
+    main: green[500],
+  }
+}
+
+export const MuiTheme = createMuiTheme({
   palette: {
-    primary: {
-      main: green[500],
-    }
+    ...theme
   },
   overrides: {}
 });
-
-export default theme;

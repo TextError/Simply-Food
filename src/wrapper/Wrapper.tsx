@@ -2,11 +2,14 @@ import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/styles';
 
-import theme from '../material-ui/theme';
+import { MuiTheme } from '../material-ui/theme';
+
+import Base from '../styled-components/Base';
 
 export const Wrapper: React.FC<IProps> = ({ element }) => (
-  <ThemeProvider theme={theme}>
+  <ThemeProvider theme={MuiTheme}>
     <CssBaseline />
+    <Base />
     {element}
   </ThemeProvider>
 );

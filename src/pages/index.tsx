@@ -1,12 +1,11 @@
-import { Typography } from '@material-ui/core';
 import React from 'react';
 
 import Layout from '../layout/Layout';
+import Text from '../components/home/Text';
 
 const Home: React.FC = () => (
   <Layout>
-    <div>home</div>
-    <Typography color='primary'>lorem</Typography>
+    <Text />
   </Layout>
 );
 
