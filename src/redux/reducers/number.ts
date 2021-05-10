@@ -13,6 +13,10 @@ const number = (state=INITIAL_STATE, action: IAction): INumberState => {
   switch(action.type) {
     case NUMBER.INCREMENT:
       return { ...state, value: action.payload}
+    case NUMBER.DECREMENT:
+      return { ...state, value: action.payload}
+    case NUMBER.RESET:
+      return { ...state, ...data }
     default:
       return state;
   }
