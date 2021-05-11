@@ -12,6 +12,9 @@ const StyledFooter = styled.footer<IProps>`
       h6, p {
         padding-left: 5px;
       }
+      p {
+        margin-bottom: 6px;
+      }
     `}
   };
   & > .MuiGrid-container > .MuiGrid-item {
