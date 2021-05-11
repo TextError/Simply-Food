@@ -8,6 +8,11 @@ const StyledFooter = styled.footer<IProps>`
   background: linear-gradient(to bottom, var(--secondary) 50%, var(--lightWhite) 50%);
   .webdev {
     color: var(--lightWhite);
+    ${({ isMobile }) => isMobile && `
+      h6, p {
+        padding-left: 5px;
+      }
+    `}
   };
   & > .MuiGrid-container > .MuiGrid-item {
     padding: 8px 0 8px 6px;
@@ -28,7 +33,7 @@ const StyledFooter = styled.footer<IProps>`
         a {
           font-size: 1.5em;
           margin: auto 5px 0;
-          color: ${({ isMobile }) => isMobile ? 'var(--white)' : 'var(--secondary)'};
+          color: ${({ isMobile }) => isMobile ? 'var(--lightWhite)' : 'var(--secondary)'};
           :hover {
             color: var(--primary);
           };
@@ -63,8 +68,11 @@ const StyledFooter = styled.footer<IProps>`
         min-height: 24px;
       };
       i {
+        width: 20px;
+        display: flex;
+        justify-content: center;
         color: var(--secondary);
-        margin-right: var(--padding);  
+        margin-right: 12px; 
       };
     };
   };
