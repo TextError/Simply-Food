@@ -25,6 +25,14 @@ const Base = createGlobalStyle`
     --minHeight: calc(100vh - var(--navbar) - var(--footer));
     --padding: 24px;
   };
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    :hover {
+      cursor: pointer;
+    };
+  };
 `
 
 export default Base;
