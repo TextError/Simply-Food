@@ -1,7 +1,7 @@
 const title = `Title`;
 const description = `description`;
 const author = `Savin Raul Calin`;
-const url = "https://website-in-progress.netlify.app/";
+const url = "https://simply-food.netlify.app/";
 const image = `${url}/src/assets/website/website-icon.png`;
 const keywords = ["simple", "food", "recipes"];
 
@@ -24,5 +24,13 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
       options: {},
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Roboto', 'Roboto:bold']
+        }
+      }
+    }
   ],
 }

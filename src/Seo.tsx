@@ -1,9 +1,8 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { SEOProps } from './utils/interfaces';
 import { useStaticQuery, graphql } from "gatsby";
 
-const SEO: React.FC<SEOProps> = props => {
+const SEO: React.FC<IProps> = props => {
   const { site } = useStaticQuery(querySEO);
 
   const { title, description, url, author, meta = [], keywords = [], image } = site.siteMetadata;
@@ -85,7 +84,7 @@ const SEO: React.FC<SEOProps> = props => {
       {/* <!-- Material UI --> */}
      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
       {/* <!-- Font-Awesome --> */}
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossOrigin="anonymous"></link>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     </Helmet>
   );
 };
@@ -101,5 +100,20 @@ const querySEO = graphql`
     }
   }
 `
+
+interface MetaItem {
+  name: string;
+  content: string;
+};
+
+interface IProps {
+  title?: string;
+  description?: string;
+  url?: string;
+  author?: string;
+  keywords?: string[];
+  meta?: MetaItem[];
+  image?: string;
+};
 
 export default SEO;
