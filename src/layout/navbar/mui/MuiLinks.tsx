@@ -5,17 +5,17 @@ import { ListItem } from '@material-ui/core';
 
 const MuiLinks: React.FC = () => (
   <>
-    <Link to='/a'>
-      <ListItem component='li' button>a</ListItem>
+    <Link to='/home'>
+      <ListItem component='li' button>Home</ListItem>
     </Link>
-    <Link to='/b'>
-      <ListItem component='li' button>b</ListItem>
+    <Link to='/about'>
+      <ListItem component='li' button>About</ListItem>
     </Link>
-    <Link to='/c'>
-      <ListItem component='li' button>c</ListItem>
+    <Link to='/recipes'>
+      <ListItem component='li' button>Recipes</ListItem>
     </Link>
-    <Link to='/d'>
-      <ListItem component='li' button>d</ListItem>
+    <Link to='/contact'>
+      <ListItem component='li' button>Contact</ListItem>
     </Link>
   </>
 );
