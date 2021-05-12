@@ -18,6 +18,9 @@ const Base = createGlobalStyle`
     --lightWhite: ${theme.white.light};
     --white: ${theme.white.main};
     --darkWhite: ${theme.white.dark};
+    --lightRed: ${theme.error.light};
+    --red: ${theme.error.main};
+    --darkRed: ${theme.error.dark};
     --navbar: 64px;
     --footer: 188px;
     --transition: .3s;

@@ -1,5 +1,5 @@
 import { createMuiTheme } from "@material-ui/core";
-import { lightBlue, grey } from "@material-ui/core/colors";
+import { lightBlue, grey, red } from "@material-ui/core/colors";
 
 export const theme = {
   primary: {
@@ -16,6 +16,11 @@ export const theme = {
     light: grey[100],
     main: grey[300],
     dark: grey[600],
+  },
+  error: {
+    light: red[100],
+    main: red[300],
+    dark: red[600],
   }
 }
 
