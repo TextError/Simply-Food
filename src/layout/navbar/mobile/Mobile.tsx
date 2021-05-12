@@ -1,12 +1,38 @@
-import React from 'react'
-import StyledMobile from './Styled_Mobile';
+import React, { useState } from 'react';
+import { List } from '@material-ui/core';
 
-const Mobile = () => {
+import MuiLinks from '../mui/MuiLinks';
+
+
+import StyledMobile, { Drawer } from './Styled_Mobile';
+
+const Mobile: React.FC = () => {
+  const [isOpen, setOpen] = useState(false);
+
+  const onToggle = (e: React.KeyboardEvent | React.MouseEvent): void => {
+    if(e.type === 'keydown' && (
+      (e as React.KeyboardEvent).key === 'Tab' || 
+      (e as React.KeyboardEvent).key === 'Shift'))
+      return;
+
+    setOpen(!isOpen);
+  };
+
   return (
-    <StyledMobile>
-      mobile
-    </StyledMobile>
-  )
-}
+    <>
+      <StyledMobile onClick={onToggle} data-testid='menu'>
+        <span className='top'></span>
+        <span className='middle'></span>
+        <span className='bottom'></span>
+      { isOpen && <div className='caret'><i /></div> }
+      </StyledMobile>
+      <Drawer data-testid='drawer' open={isOpen} onClose={onToggle}>
+        <List onClick={onToggle}>
+          <MuiLinks />
+        </List>
+      </Drawer>
+    </>
+  );
+};
 
 export default Mobile;

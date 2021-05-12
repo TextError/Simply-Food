@@ -1,7 +1,9 @@
 import styled from 'styled-components';
+import { List as MUIList } from '@material-ui/core';
 
-const StyledDesktop = styled.div`
-
+const List = styled(MUIList)`
+  display: flex;
+  color: var(--white);
 `;
 
-export default StyledDesktop;
+export default List;

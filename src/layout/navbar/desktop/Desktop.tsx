@@ -1,12 +1,12 @@
-import React from 'react'
-import StyledDesktop from './Styled_Desktop';
+import React from 'react';  
+import  List from './Styled_Desktop';
 
-const Desktop: React.FC = () => {
-  return (
-    <StyledDesktop>
-      desktop
-    </StyledDesktop>
-  )
-}
+import MuiLinks from '../mui/MuiLinks';
+
+const Desktop: React.FC = () => (
+  <List>
+    <MuiLinks />
+  </List>
+);
 
 export default Desktop;
