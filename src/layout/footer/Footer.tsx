@@ -1,6 +1,8 @@
 import React from 'react';
 import { Grid, Typography, CardMedia, Box, useMediaQuery } from "@material-ui/core";
 import { useTheme } from '@material-ui/core/styles';
+import { StaticImage } from 'gatsby-plugin-image';
+
 import WebDev from "./WebDev";
 
 import StyledFooter from "./Styled_Footer";
@@ -16,7 +18,7 @@ const Footer: React.FC = () => {
         <Grid item sm={4} xs={12}>
           <Box component='div'>
             <CardMedia>
-              {/* Add Image here */}
+              <StaticImage src='../../assets/profile/me.jpg' alt='profile' />
             </CardMedia>
             <Grid item>
               { isMobile && <WebDev /> }
