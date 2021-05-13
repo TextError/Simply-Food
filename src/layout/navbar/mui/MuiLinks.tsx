@@ -5,7 +5,7 @@ import { ListItem } from '@material-ui/core';
 
 const MuiLinks: React.FC = () => (
   <>
-    <Link to='/home'>
+    <Link to='/'>
       <ListItem component='li' button>Home</ListItem>
     </Link>
     <Link to='/about'>
