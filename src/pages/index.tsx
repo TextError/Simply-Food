@@ -1,13 +1,13 @@
 import React from 'react';
+import SEO from '../Seo';
 
 import Layout from '../layout/Layout';
 import Text from '../components/home/Text';
-import SEO from '../Seo';
 
 const Home: React.FC = () => (
   <Layout>
     <SEO />
-    <Text />
+    
   </Layout>
 );
 

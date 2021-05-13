@@ -28,5 +28,11 @@ export const MuiTheme = createMuiTheme({
   palette: {
     ...theme
   },
-  overrides: {}
+  overrides: {
+    MuiTypography: {
+      h1: {
+        fontSize: '3rem'
+      }
+    }
+  }
 });

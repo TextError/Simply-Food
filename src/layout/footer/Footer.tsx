@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
         <Grid item sm={4} xs={12}>
           <Box component='div'>
             <CardMedia>
-              <StaticImage src='../../assets/profile/me.jpg' alt='profile' />
+              <StaticImage src='../../assets/profile/me.jpg' alt='author image' height={200} placeholder='blurred' />
             </CardMedia>
             <Grid item>
               { isMobile && <WebDev /> }

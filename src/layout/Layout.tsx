@@ -6,7 +6,7 @@ import Footer from './footer/Footer';
 const Layout: React.FC<IProps> = ({ children }) => (
   <>
     <Navbar />
-      {children}
+      { children }
     <Footer />
   </>
 );
