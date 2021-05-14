@@ -4,16 +4,15 @@ const StyledHome= styled.main`
   section :nth-of-type(1) {
     position: relative;
     overflow: hidden;
-    max-height: 50vh;
+    max-height: calc(100vh - var(--navbar));
     background: rgba(0, 0, 0, .4);
     .card {
       position: absolute;
       right: 0;
-      top: 50%;
-      transform: translate(0, -50%);
+      bottom: 0;
       border-radius: 5px;
       padding: var(--padding);
-      margin: 0 var(--padding);
+      margin: var(--padding);
       text-align: center;
       color: var(--secondary);
 
@@ -26,6 +25,26 @@ const StyledHome= styled.main`
         font-weight: 400
       };
     }
+  }
+
+  @media(max-width: 375px) {
+    section :nth-of-type(1) > .card {
+      bottom: unset;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+    };
+  }
+
+  @media(max-height: 425px) and (orientation: landscape) {
+    section :nth-of-type(1) > .card {
+      bottom: unset;
+      top: 50%;
+      right: 0px;
+      transform: translate(0px, -50%);
+      margin: 0 var(--padding);
+    };
   }
 `;
 

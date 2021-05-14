@@ -48,7 +48,7 @@ MuiTheme.typography.h1 = {
     fontSize: '2rem',
   },
   [MuiTheme.breakpoints.down('xs')]: {
-    fontSize: '1.5rem',
+    fontSize: '1rem',
   },
 };
 
