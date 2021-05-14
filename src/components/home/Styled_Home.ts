@@ -3,13 +3,17 @@ import styled from 'styled-components';
 const StyledHome= styled.main`
   section :nth-of-type(1) {
     position: relative;
+    overflow: hidden;
+    max-height: 50vh;
+    background: rgba(0, 0, 0, .4);
     .card {
       position: absolute;
-      bottom: 0;
       right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
       border-radius: 5px;
       padding: var(--padding);
-      margin: var(--padding);
+      margin: 0 var(--padding);
       text-align: center;
       color: var(--secondary);
 
