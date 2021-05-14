@@ -1,11 +1,16 @@
 import React from 'react';
+import SEO from '../Seo';
 
-const Contact: React.FC = () => {
-  return (
-    <div>
-      contact
-    </div>
-  )
-}
+import Layout from '../layout/Layout';
+import StyledContact from '../components/contact/Styled_Contact';
+
+const Contact: React.FC = () => (
+  <Layout>
+    <StyledContact>
+      <SEO title='contact' />
+
+    </StyledContact>
+  </Layout>
+);
 
 export default Contact;
