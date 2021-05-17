@@ -3,19 +3,18 @@ import { Box, Typography } from '@material-ui/core';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const Banner: React.FC = () => (
-  <header>
+  <section>
     <StaticImage 
       src='../../assets/food/home-main.jpg' 
       alt='banner-with-text' 
-      className='card-image' 
       placeholder='blurred'
-      layout='fullWidth'
+      layout='fullWidth' 
     />
-    <Box component='div' className='card-text'>
+    <Box component='div' className='card'>
       <Typography variant='h1'>Simple & Easy {<br />} Recipes</Typography>
       <Typography variant='h5'>Lorem ipsum dolor sit amet.</Typography>
     </Box>
-  </header>
+  </section>
 );
 
 export default Banner;
