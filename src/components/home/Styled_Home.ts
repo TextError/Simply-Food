@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 
 const StyledHome= styled.main`
-  section :nth-of-type(1) {
+  padding: var(--padding);
+  header {
+    height: 50vh;
     position: relative;
-    overflow: hidden;
-    max-height: calc(100vh - var(--navbar));
-    background: rgba(0, 0, 0, .4);
-    .card {
+    margin-bottom: var(--padding);
+    .card-image {
+      height: 100%;
+    };
+    .card-text {
       position: absolute;
       right: 0;
       bottom: 0;
@@ -24,28 +27,28 @@ const StyledHome= styled.main`
         margin-bottom: 10px;
         font-weight: 400
       };
-    }
-  }
+    };
+  };
 
   @media(max-width: 375px) {
-    section :nth-of-type(1) > .card {
+    header > .card-text {
       bottom: unset;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       margin: 0;
     };
-  }
+  };
 
   @media(max-height: 425px) and (orientation: landscape) {
-    section :nth-of-type(1) > .card {
+    header > .card-text {
       bottom: unset;
       top: 50%;
       right: 0px;
       transform: translate(0px, -50%);
       margin: 0 var(--padding);
     };
-  }
+  };
 `;
 
 export default StyledHome;
