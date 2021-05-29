@@ -9,7 +9,7 @@ import StyledContact from '../components/contact/Styled_Contact';
 const Contact: React.FC = () => (
   <Layout>
     <StyledContact>
-      <SEO title='contact' />
+      <SEO title='Contact' />
       <Wrapper />
     </StyledContact>
   </Layout>
