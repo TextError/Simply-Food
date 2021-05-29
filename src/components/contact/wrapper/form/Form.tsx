@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import isEmpty from "../common/isEmpty";
 import { IIndexable, IOnChange } from "../common/interface";
 
-import { Paper } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import Input from '../common/Input';
 
 const Form: React.FC = () => {
@@ -17,9 +17,14 @@ const Form: React.FC = () => {
     const obj: IIndexable = { ...error };
     !isEmpty(obj[name]) && setError({ ...error, [name]: '' });
   };
+
+  const onSubmit = (e:React.FormEvent<HTMLFormElement>): void => {
+    e.preventDefault();
+
+  };
   
   return (
-    <Paper>
+    <Grid item sm={6} xs={12} component='form' onSubmit={onSubmit} noValidate >
       <Input
         label={'Name *'}
         name='name'
@@ -38,7 +43,7 @@ const Form: React.FC = () => {
         error={error.email}
         type='email'
       />
-    </Paper>
+    </Grid>
   )
 }
 
