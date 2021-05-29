@@ -5,11 +5,11 @@ import Text from './text/Text';
 import Form from './form/Form';
 
 const Wrapper: React.FC = () => (
-  <Grid container>
-    <Grid item sm={6} xs={12}>
+  <Grid container component='section'>
+    <Grid item component='article' sm={6} xs={12}>
       <Text />
     </Grid>
-    <Grid item sm={6} xs={12}>
+    <Grid item component='form' noValidate sm={6} xs={12}>
       <Form />
     </Grid>
   </Grid>
