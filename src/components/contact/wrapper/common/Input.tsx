@@ -1,6 +1,6 @@
 import React from 'react';
-import isEmpty from "./isEmpty";
 import { TextField } from "@material-ui/core";
+import isEmpty from '../../../../utils/isEmpty';
 
 const Input: React.FC<IProps> = ({ label, name, value, onChange, onFocus, error, helperText, type }) => (
   <TextField

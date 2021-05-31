@@ -1,5 +1,6 @@
 import React from 'react';
-import isEmpty from "./isEmpty";
+import isEmpty from '../../../../utils/isEmpty';
+
 import { TextField, TextareaAutosize } from "@material-ui/core";
 
 const TextArea: React.FC<IProps> = ({ label, name, value, onChange, onFocus, error, helperText, type }) => (
