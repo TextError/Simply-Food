@@ -5,7 +5,7 @@ interface IProps {
 };
 
 const StyledFooter = styled.footer<IProps>`
-  background: linear-gradient(to bottom, var(--secondary) 50%, var(--lightWhite) 50%);
+  background: linear-gradient(to bottom, var(--darkPrimary) 50%, var(--lightSecondary) 50%);
   .webdev {
     color: var(--lightWhite);
     ${({ isMobile }) => isMobile && `
@@ -34,7 +34,7 @@ const StyledFooter = styled.footer<IProps>`
         a {
           font-size: 1.5em;
           margin: auto 5px 0;
-          color: ${({ isMobile }) => isMobile ? 'var(--lightWhite)' : 'var(--secondary)'};
+          color: ${({ isMobile }) => isMobile ? 'var(--lightWhite)' : 'var(--darkPrimary)'};
           :hover {
             color: var(--primary);
           };
@@ -72,7 +72,7 @@ const StyledFooter = styled.footer<IProps>`
         width: 20px;
         display: flex;
         justify-content: center;
-        color: var(--secondary);
+        color: var(--darkPrimary);
         margin-right: 12px; 
       };
     };
