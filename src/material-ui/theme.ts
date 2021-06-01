@@ -1,7 +1,7 @@
 import { createMuiTheme } from "@material-ui/core";
 import { grey, red } from "@material-ui/core/colors";
 
-export const theme = {
+const theme = {
   primary: {
     light: '#F0F8FF',
     main: '#A9D7FF',
@@ -22,9 +22,9 @@ export const theme = {
     main: red[300],
     dark: red[600],
   }
-}
+};
 
-export const MuiTheme = createMuiTheme({
+const MuiTheme = createMuiTheme({
   palette: {
     ...theme
   },
@@ -32,6 +32,7 @@ export const MuiTheme = createMuiTheme({
     allVariants: {
       color: '#373842'
     }
+    fontSize: 16
   },
   overrides: {
     MuiTypography: {
@@ -47,3 +48,23 @@ export const MuiTheme = createMuiTheme({
     }
   }
 });
+
+MuiTheme.typography.h1 = {
+  [MuiTheme.breakpoints.down('sm')]: {
+    fontSize: '2rem',
+  },
+  [MuiTheme.breakpoints.down('xs')]: {
+    fontSize: '1rem',
+  },
+};
+
+MuiTheme.typography.h5 = {
+  [MuiTheme.breakpoints.down('sm')]: {
+    fontSize: '.9rem',
+  },
+  [MuiTheme.breakpoints.down('xs')]: {
+    fontSize: '.7rem',
+  },
+};
+
+export { MuiTheme, theme }
