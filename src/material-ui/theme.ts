@@ -1,16 +1,16 @@
 import { createMuiTheme } from "@material-ui/core";
-import { lightBlue, grey, red } from "@material-ui/core/colors";
+import { grey, red } from "@material-ui/core/colors";
 
 const theme = {
   primary: {
-    light: lightBlue[100],
-    main: lightBlue[300],
-    dark: lightBlue[600],
+    light: '#F0F8FF',
+    main: '#A9D7FF',
+    dark: '#62B6FF'
   },
   secondary: {
-    light: '#F99C72',
-    main: '#F7834F',
-    dark: '#C6693F'
+    light: '#FFF8F2',
+    main: '#fedbbf',
+    dark: '#f0a68d'
   },
   white: {
     light: grey[100],
@@ -29,15 +29,21 @@ const MuiTheme = createMuiTheme({
     ...theme
   },
   typography: {
+    allVariants: {
+      color: '#373842'
+    }
     fontSize: 16
   },
   overrides: {
     MuiTypography: {
       h1: {
-        fontSize: '3rem',
+        fontSize: '3.5rem',
       },
-      h5: {
-        fontSize: '1.25rem'
+      h2: {
+        fontSize: '2rem',
+      },
+      h3: {
+        fontSize: '1.75rem',
       }
     }
   }

@@ -3,7 +3,6 @@ import { List as MUIList } from '@material-ui/core';
 
 const List = styled(MUIList)`
   display: flex;
-  color: var(--white);
 `;
 
 export default List;

@@ -5,7 +5,7 @@ import Text from './text/Text';
 import Form from './form/Form';
 
 const Wrapper: React.FC = () => (
-  <Grid container component='section'>
+  <Grid component='section' container alignItems='center' justify='center'>
     <Text />
     <Form />
   </Grid>

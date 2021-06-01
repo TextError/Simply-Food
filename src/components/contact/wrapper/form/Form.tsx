@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import isEmpty from "../common/isEmpty";
-import { IIndexable, IOnChange } from "../common/interface";
+import isEmpty from '../../../../utils/isEmpty';
 
-import { Grid } from '@material-ui/core';
+import { Button, Grid } from '@material-ui/core';
 import Input from '../common/Input';
 import TextArea from '../common/TextArea';
 
@@ -25,9 +24,9 @@ const Form: React.FC = () => {
   };
   
   return (
-    <Grid item sm={6} xs={12} component='form' onSubmit={onSubmit} noValidate>
+    <Grid component='form' xs={12} container onSubmit={onSubmit} noValidate >
       <Input
-        label={'Name *'}
+        label={'Name'}
         name='name'
         value={name}
         onChange={onChange}
@@ -36,7 +35,7 @@ const Form: React.FC = () => {
         type='name'
       />
       <Input
-        label={'Email *'}
+        label={'Email'}
         name='email'
         value={email}
         onChange={onChange}
@@ -45,7 +44,7 @@ const Form: React.FC = () => {
         type='email'
       />
       <TextArea 
-        label={'Message *'}
+        label={'Message'}
         name='message'
         value={message}
         onChange={onChange}
@@ -53,6 +52,7 @@ const Form: React.FC = () => {
         error={error.message}
         type='text'
       />
+      <Button type='submit' variant='outlined' >Submit</Button>
     </Grid>
   );
 };

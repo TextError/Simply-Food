@@ -29,6 +29,10 @@ const Base = createGlobalStyle`
     --padding: 24px;
   };
 
+  main {
+    background-color: var(--lightSecondary);
+  }
+
   a {
     text-decoration: none;
     color: inherit;
