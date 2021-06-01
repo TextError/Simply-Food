@@ -5,11 +5,14 @@ const StyledContact = styled.main`
   display: flex;
   align-items: center;
   & > section {
-    padding: 30px;
+    & > form, > article {
+      max-width: 400px;
+      padding: 20px;
+    };
     & > form {
       flex-direction: column;
       & > div, > button{
-        margin-top: 5px;
+        margin-top: 10px;
       };
       & > button {
         margin-left: auto;

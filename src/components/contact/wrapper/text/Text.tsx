@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
 
 const Text: React.FC = () => (
-  <Grid component='article' md={5} sm={6} xs={12} item >
+  <Grid component='article' xs={12} item >
     <Typography variant='h1'>Hello</Typography>
     <Typography variant='h2'>Get in Touch</Typography>
     <Typography>Feel free to contact me via email or social media.</Typography>

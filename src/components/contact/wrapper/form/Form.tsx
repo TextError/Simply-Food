@@ -24,7 +24,7 @@ const Form: React.FC = () => {
   };
   
   return (
-    <Grid component='form' md={5} sm={6} xs={12} container onSubmit={onSubmit} noValidate >
+    <Grid component='form' xs={12} container onSubmit={onSubmit} noValidate >
       <Input
         label={'Name'}
         name='name'
@@ -44,7 +44,7 @@ const Form: React.FC = () => {
         type='email'
       />
       <TextArea 
-        label={'Message here'}
+        label={'Message'}
         name='message'
         value={message}
         onChange={onChange}
