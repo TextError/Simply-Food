@@ -31,7 +31,13 @@ export const MuiTheme = createMuiTheme({
   overrides: {
     MuiTypography: {
       h1: {
-        fontSize: '3rem'
+        fontSize: '3.5rem',
+      },
+      h2: {
+        fontSize: '2rem',
+      },
+      h3: {
+        fontSize: '1.75rem',
       }
     }
   }
