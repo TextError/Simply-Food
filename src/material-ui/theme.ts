@@ -82,5 +82,15 @@ export const MuiTheme = createMuiTheme({
         marginRight: '0px'
       }
     },
+    MuiButton: {
+      outlinedPrimary: {
+        border: `1px solid ${theme.primary.main}`,
+        "&:hover": {
+          backgroundColor: theme.primary.light,
+          color: theme.white.light
+        }
+      },
+      
+    }
   }
 });
