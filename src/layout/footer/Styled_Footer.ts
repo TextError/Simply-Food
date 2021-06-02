@@ -5,15 +5,21 @@ interface IProps {
 };
 
 const StyledFooter = styled.footer<IProps>`
-  background: linear-gradient(to bottom, var(--darkPrimary) 50%, var(--lightSecondary) 50%);
+  background: linear-gradient(to bottom, var(--lightPrimary) 50%, var(--lightWhite) 50%);
   .webdev {
-    color: var(--lightWhite);
+    h6, p {
+      color: var(--lightWhite);
+    };
     ${({ isMobile }) => isMobile && `
       h6, p {
         padding-left: 5px;
       }
     `}
   };
+  .webdev + div > a:hover {
+    color: var(--darkPrimary) !important;
+  };
+  
   & > .MuiGrid-container > .MuiGrid-item {
     padding: 8px 0 8px 6px;
     min-height: 86px;
@@ -36,7 +42,7 @@ const StyledFooter = styled.footer<IProps>`
           margin: auto 5px 0;
           color: ${({ isMobile }) => isMobile ? 'var(--lightWhite)' : 'var(--darkPrimary)'};
           :hover {
-            color: var(--primary);
+            color: var(--secondary);
           };
         };
       };

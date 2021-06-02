@@ -30,7 +30,7 @@ const Base = createGlobalStyle`
   };
 
   main {
-    background-color: var(--lightSecondary);
+    background-color: var(--lightWhite);
   }
 
   a {
