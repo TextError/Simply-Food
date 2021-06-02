@@ -5,7 +5,7 @@ interface IProps {
 };
 
 const StyledFooter = styled.footer<IProps>`
-  background: linear-gradient(to bottom, var(--lightPrimary) 50%, var(--lightWhite) 50%);
+  background: linear-gradient(to bottom, var(--lightPrimary) 50%, var(--background) 50%);
   .webdev {
     h6, p {
       color: var(--lightWhite);

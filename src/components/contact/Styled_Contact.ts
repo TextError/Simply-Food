@@ -13,10 +13,18 @@ const StyledContact = styled.main`
     & > article {
       & > h1 {
         margin-bottom: revert;
+        color: var(--darkPrimary);
       };
       & > h2 {
         margin-bottom: 20px;
       };
+      & > p {
+        display: flex;
+        &  > span {
+          padding: 0 5px;
+          width: 75px;
+        }
+      }
     };
     & > form {
       flex-direction: column;

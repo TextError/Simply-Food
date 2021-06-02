@@ -21,6 +21,7 @@ const Base = createGlobalStyle`
     --lightRed: ${theme.error.light};
     --red: ${theme.error.main};
     --darkRed: ${theme.error.dark};
+    --background: ${theme.white.light};
     --navbar: 64px;
     --footer: 188px;
     --transition: .3s;
@@ -30,7 +31,7 @@ const Base = createGlobalStyle`
   };
 
   main {
-    background-color: var(--lightWhite);
+    background-color: var(--background);
   }
 
   a {

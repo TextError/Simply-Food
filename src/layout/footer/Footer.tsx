@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
           <Grid container>
             { !isMobile && <WebDev /> }
             <Box component='div'>
-              <Box component='span'><i className="fas fa-globe"></i><a href='https://savin-raul.netlify.app/' target='_blank' rel="noreferrer">https://savin-raul.netlify.app</a></Box>
+              <Typography component='span'><i className="fas fa-globe"></i><a href='https://savin-raul.netlify.app/' target='_blank' rel="noreferrer">https://savin-raul.netlify.app</a></Typography>
               <Typography><i className="fas fa-home" />Reading</Typography>
               <Typography><i className="fas fa-phone" />0789 544 0744</Typography>
             </Box>
