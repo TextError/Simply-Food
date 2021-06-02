@@ -44,6 +44,43 @@ export const MuiTheme = createMuiTheme({
       h3: {
         fontSize: '1.75rem',
       }
-    }
+    },
+    MuiOutlinedInput: {
+      root: {
+        "&:hover:not($disabled):not($focused):not($error) $notchedOutline": {
+          border: "2px solid",
+          borderColor: theme.primary.main
+        },
+        "& $notchedOutline": {
+          borderColor: theme.primary.main
+        },
+        "&$focused $notchedOutline": {
+          borderColor: theme.primary.dark
+        }
+      }
+    },
+    MuiFormLabel: {
+      root: {
+        color: theme.primary.main,
+        '&$focused': {
+          color: theme.primary.dark
+        }
+      }
+    },
+    MuiInputBase: {
+      root: {
+        color: theme.primary.dark,
+      }
+    },
+    MuiFormHelperText: {
+      root: {
+        color: theme.primary.dark,
+        marginTop: '20px'
+      },
+      contained: {
+        marginLeft: '0px',
+        marginRight: '0px'
+      }
+    },
   }
 });
