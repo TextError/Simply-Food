@@ -7,7 +7,7 @@ import StyledHome from '../components/home/Styled_Home';
 const Home: React.FC = () => (
   <Layout>
     <StyledHome>
-    <SEO title='home' />
+      <SEO title='home' />
 
     </StyledHome>
   </Layout>

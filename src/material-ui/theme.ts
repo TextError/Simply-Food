@@ -32,6 +32,7 @@ export const MuiTheme = createMuiTheme({
     allVariants: {
       color: '#373842'
     },
+    fontSize: 16
   },
   overrides: {
     MuiTypography: {
