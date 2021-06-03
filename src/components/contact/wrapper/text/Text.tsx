@@ -3,8 +3,8 @@ import { Grid, Typography } from '@material-ui/core';
 
 const Text: React.FC = () => (
   <Grid component='article' xs={12} item >
-    <Typography variant='h1'>Hello!</Typography>
-    <Typography variant='h2'>Get in Touch</Typography>
+    <Typography variant='h1' color='secondary'>Hello!</Typography>
+    <Typography variant='h2' color='secondary'>Get in Touch</Typography>
     <Typography>Feel free to contact me via email or social media.</Typography>
     <Typography>
       ⟶
