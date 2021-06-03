@@ -31,7 +31,7 @@ export const MuiTheme = createMuiTheme({
   typography: {
     allVariants: {
       color: '#373842'
-    }
+    },
   },
   overrides: {
     MuiTypography: {
