@@ -7,19 +7,19 @@ const Text: React.FC = () => (
     <Typography variant='h2'>Get in Touch</Typography>
     <Typography>Feel free to contact me via email or social media.</Typography>
     <Typography>
-      <span>⟶&nbsp;</span>
-      Email:
-      <span><a href="mailto:texterror401@gmail.com">texterror401@gmail.com</a></span>
+      ⟶
+      <span>Email:</span>
+      <a href="mailto:texterror401@gmail.com">texterror401@gmail.com</a>
     </Typography>
     <Typography>
-      <span>⟶&nbsp;</span>
-      Github:
-      <span><a href='https://github.com/TextError' target='_blank' rel="noreferrer">https://github.com/TextError</a></span>
+      ⟶
+      <span>Github:</span>
+      <a href='https://github.com/TextError' target='_blank' rel="noreferrer">https://github.com/TextError</a>
     </Typography>
     <Typography>
-      <span>⟶&nbsp;</span>
-      Linkedin:
-      <span><a href='https://www.linkedin.com/in/raul-calin-savin-22682516b/' target='_blank' rel="noreferrer"></a></span>
+      ⟶
+      <span>Linkedin:</span>
+      <a href='https://www.linkedin.com/in/raul-calin-savin-22682516b/' target='_blank' rel="noreferrer"></a>
     </Typography>
   </Grid>
 )

@@ -52,7 +52,7 @@ const Form: React.FC = () => {
         error={error.message}
         type='text'
       />
-      <Button type='submit' variant='outlined' >Submit</Button>
+      <Button type='submit' variant='outlined' color='primary' >Submit</Button>
     </Grid>
   );
 };

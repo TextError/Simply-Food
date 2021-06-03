@@ -5,78 +5,74 @@ interface IProps {
 };
 
 const StyledFooter = styled.footer<IProps>`
-  background: linear-gradient(to bottom, var(--darkPrimary) 50%, var(--lightSecondary) 50%);
-  .webdev {
+  ${({ isMobile }) => !isMobile && 'display: flex;'}
+  height: 190px;
+  align-items: center;
+  background: linear-gradient(to bottom, var(--lightPrimary) 50%, var(--background) 50%);
+  .webdev > p {
     color: var(--lightWhite);
-    ${({ isMobile }) => isMobile && `
-      h6, p {
-        padding-left: 5px;
-      }
-    `}
+    ${({ isMobile }) => isMobile &&  'padding-left: 5px'};
+    :nth-of-type(1) {
+      font-size: 1.25rem;
+    };
   };
-  & > .MuiGrid-container > .MuiGrid-item {
-    padding: 8px 0 8px 6px;
-    min-height: 86px;
-    & > .MuiBox-root {
-      display: flex;
-      & > .MuiCardMedia-root {
-        width: ${({ isMobile }) => isMobile ? '86px' : '100px'};
-        height: ${({ isMobile }) => isMobile ? '86px' : '100px'};
-        background-position: top;
-        margin-right: var(--padding);
-        border-radius: 5px;
-        overflow: hidden;
-      };
-      & > .MuiGrid-item {
-        display: flex;
-        flex-direction: column;
-        justify-content: ${({ isMobile }) => isMobile ? 'center' : 'flex-end'};
-        a {
-          font-size: 1.5em;
-          margin: auto 5px 0;
-          color: ${({ isMobile }) => isMobile ? 'var(--lightWhite)' : 'var(--darkPrimary)'};
-          :hover {
-            color: var(--primary);
-          };
+  & > section :nth-of-type(1) {
+    height: ${({ isMobile }) => isMobile ? '95px' : '110px'};
+    padding: 5px;
+    justify-content: center;
+    & > .MuiCardMedia-root {
+      width: ${({ isMobile }) => isMobile ? '85px' : '100px'};
+      height: ${({ isMobile }) => isMobile ? '85px' : '100px'};
+      background-position: top;
+      margin-right: var(--padding);
+      border-radius: 5px;
+      overflow: hidden;
+    };
+    & > .MuiGrid-item {
+      display: ${({ isMobile }) => isMobile ? 'block' : 'flex'};
+      justify-content: ${({ isMobile }) => isMobile ? 'flex-end' : 'center'};
+      a {
+        font-size: 1.5em;
+        margin: auto 5px 0;
+        color: ${({ isMobile }) => isMobile ? 'var(--lightWhite)' : 'var(--darkPrimary)'};
+        :hover {
+          color: ${({ isMobile }) => isMobile ? 'var(--darkPrimary)' : 'var(--secondary)'};
         };
       };
     };
   };
-  & > .MuiGrid-container > .MuiGrid-item {
-    display: flex;
+
+  & > section:nth-last-of-type(1) {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    & > .MuiGrid-container {
-      max-width: 250px;
+    height: ${({ isMobile }) => isMobile ? '95px' : '190px'};
+    & > div, article {
+      height: 95px;
+      display: flex;
+      flex-direction: column;
       justify-content: center;
-      & > div:nth-child(1) {
-        padding-bottom: 8px;
-      };
-      & > div:nth-child(2) {
-        padding-top: 8px;
-      };
-      & > .MuiBox-root {
-        min-height: 86px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      };
-      & span, p {
+    };
+    & > article {
+      width: 260px;
+      & > p {
         display: flex;
         align-items: center;
-      };
-      & span {
-        min-height: 24px;
-      };
-      i {
-        width: 20px;
-        display: flex;
-        justify-content: center;
-        color: var(--darkPrimary);
-        margin-right: 12px; 
+        :nth-of-type(1) {
+          min-height: 24px;
+        };
+        :nth-of-type(1):hover > i, :nth-last-of-type(1):hover > i {
+          color: var(--secondary);
+        };
+        & > i {
+          width: 20px;
+          display: flex;
+          justify-content: center;
+          color: var(--darkPrimary);
+          margin-right: 12px; 
+        };
       };
     };
   };
-`;
+`
 
 export default StyledFooter;

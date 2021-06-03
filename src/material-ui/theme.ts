@@ -1,37 +1,37 @@
 import { createMuiTheme } from "@material-ui/core";
-import { grey, red } from "@material-ui/core/colors";
+import { red } from "@material-ui/core/colors";
 
-const theme = {
+export const theme = {
   primary: {
-    light: '#F0F8FF',
-    main: '#A9D7FF',
-    dark: '#62B6FF'
+    light: '#33C1B1',
+    main: '#2BA193',
+    dark: '#228176'
   },
   secondary: {
-    light: '#FFF8F2',
-    main: '#fedbbf',
-    dark: '#f0a68d'
+    light: '#F7BC8D',
+    main: '#F4A261',
+    dark: '#F29040'
   },
   white: {
-    light: grey[100],
-    main: grey[300],
-    dark: grey[600],
+    light: '#FCF8ED',
+    main: '#F9F1DC',
+    dark: '#F6EACB',
   },
   error: {
     light: red[100],
     main: red[300],
     dark: red[600],
   }
-};
+}
 
-const MuiTheme = createMuiTheme({
+export const MuiTheme = createMuiTheme({
   palette: {
     ...theme
   },
   typography: {
     allVariants: {
       color: '#373842'
-    }
+    },
     fontSize: 16
   },
   overrides: {
@@ -45,26 +45,53 @@ const MuiTheme = createMuiTheme({
       h3: {
         fontSize: '1.75rem',
       }
+    },
+    MuiOutlinedInput: {
+      root: {
+        "&:hover:not($disabled):not($focused):not($error) $notchedOutline": {
+          border: "2px solid",
+          borderColor: theme.primary.main
+        },
+        "& $notchedOutline": {
+          borderColor: theme.primary.main
+        },
+        "&$focused $notchedOutline": {
+          borderColor: theme.primary.dark
+        }
+      }
+    },
+    MuiFormLabel: {
+      root: {
+        color: theme.primary.main,
+        '&$focused': {
+          color: theme.primary.dark
+        }
+      }
+    },
+    MuiInputBase: {
+      root: {
+        color: theme.primary.dark,
+      }
+    },
+    MuiFormHelperText: {
+      root: {
+        color: theme.primary.dark,
+        marginTop: '20px'
+      },
+      contained: {
+        marginLeft: '0px',
+        marginRight: '0px'
+      }
+    },
+    MuiButton: {
+      outlinedPrimary: {
+        border: `1px solid ${theme.primary.main}`,
+        "&:hover": {
+          backgroundColor: theme.primary.light,
+          color: theme.white.light
+        }
+      },
+      
     }
   }
 });
-
-MuiTheme.typography.h1 = {
-  [MuiTheme.breakpoints.down('sm')]: {
-    fontSize: '2rem',
-  },
-  [MuiTheme.breakpoints.down('xs')]: {
-    fontSize: '1rem',
-  },
-};
-
-MuiTheme.typography.h5 = {
-  [MuiTheme.breakpoints.down('sm')]: {
-    fontSize: '.9rem',
-  },
-  [MuiTheme.breakpoints.down('xs')]: {
-    fontSize: '.7rem',
-  },
-};
-
-export { MuiTheme, theme }
