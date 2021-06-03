@@ -3,14 +3,14 @@ import { red } from "@material-ui/core/colors";
 
 export const theme = {
   primary: {
-    light: '#076665',
-    main: '#076665',
-    dark: '#076665'
+    light: '#352b27cc',
+    main: '#352b27e6',
+    dark: '#362c28'
   },
   secondary: {
-    light: '#e5383b',
-    main: '#e5383b',
-    dark: '#e5383b'
+    light: '#718355cc',
+    main: '#718355e6',
+    dark: '#718355'
   },
   white: {
     light: '#f5f3f4',
@@ -92,7 +92,8 @@ export const MuiTheme = createMuiTheme({
         border: `1px solid ${theme.black.main}`,
         color: theme.black.dark,
         "&:hover": {
-          backgroundColor: theme.black.dark,
+          borderColor: theme.secondary.dark,
+          backgroundColor: theme.secondary.dark,
           color: theme.white.light
         }
       }

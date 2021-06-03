@@ -20,12 +20,10 @@ const StyledContact = styled.main`
       };
       & > p {
         display: flex;
+        margin-bottom: 5px;
         & > span {
           padding: 0 5px;
           width: 75px;
-        }
-        & :hover span {
-          color: var(--secondary);
         };
       };
     };

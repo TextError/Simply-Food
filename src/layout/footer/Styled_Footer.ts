@@ -8,7 +8,7 @@ const StyledFooter = styled.footer<IProps>`
   ${({ isMobile }) => !isMobile && 'display: flex;'}
   height: 190px;
   align-items: center;
-  background: linear-gradient(to bottom, var(--lightPrimary) 50%, var(--background) 50%);
+  background: linear-gradient(to bottom, var(--darkSecondary) 50%, var(--background) 50%);
   .webdev > p {
     color: var(--lightWhite);
     ${({ isMobile }) => isMobile &&  'padding-left: 5px'};
@@ -34,9 +34,9 @@ const StyledFooter = styled.footer<IProps>`
       a {
         font-size: 1.5em;
         margin: auto 5px 0;
-        color: ${({ isMobile }) => isMobile ? 'var(--lightWhite)' : 'var(--darkPrimary)'};
+        color: ${({ isMobile }) => isMobile ? 'var(--lightWhite)' : 'var(--primary)'};
         :hover {
-          color: ${({ isMobile }) => isMobile ? 'var(--darkPrimary)' : 'var(--secondary)'};
+          color: ${({ isMobile }) => isMobile ? 'var(--primary)' : 'var(--darkSecondary)'};
         };
       };
     };
@@ -61,7 +61,7 @@ const StyledFooter = styled.footer<IProps>`
           min-height: 24px;
         };
         :nth-of-type(1):hover > i, :nth-last-of-type(1):hover > i {
-          color: var(--secondary);
+          color: var(--darkSecondary);
         };
         & > i {
           width: 20px;
