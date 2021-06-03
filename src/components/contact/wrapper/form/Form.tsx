@@ -6,7 +6,7 @@ import Input from '../common/Input';
 import TextArea from '../common/TextArea';
 
 const Form: React.FC = () => {
-  const [state, setState] = useState({ name: '', email: '', message: ''});
+  const [state, setState] = useState({ name: '', email: '', message: '' });
   const [error, setError] = useState({ name: '', email: '', message: '' });
 
   const { name, email, message } = state;
