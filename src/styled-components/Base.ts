@@ -21,6 +21,9 @@ const Base = createGlobalStyle`
     --lightRed: ${theme.error.light};
     --red: ${theme.error.main};
     --darkRed: ${theme.error.dark};
+    --lightBlack: ${theme.black.light};
+    --black: ${theme.black.main};
+    --darkBlack: ${theme.black.dark};
     --background: ${theme.white.light};
     --navbar: 64px;
     --footer: 188px;
@@ -35,7 +38,7 @@ const Base = createGlobalStyle`
   select:-webkit-autofill {
     box-shadow: 0 0 0px 1000px var(--background) inset;
     transition: background-color 5000s ease-in-out 0s;
-    -webkit-text-fill-color: var(--darkPrimary);
+    -webkit-text-fill-color: var(--lightDark);
     -webkit-box-shadow: 0 0 0px 1000px var(--background) inset;
   }
 

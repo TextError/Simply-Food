@@ -3,19 +3,24 @@ import { red } from "@material-ui/core/colors";
 
 export const theme = {
   primary: {
-    light: '#33C1B1',
-    main: '#2BA193',
-    dark: '#228176'
+    light: '#352b27cc',
+    main: '#352b27e6',
+    dark: '#362c28'
   },
   secondary: {
-    light: '#F7BC8D',
-    main: '#F4A261',
-    dark: '#F29040'
+    light: '#718355cc',
+    main: '#718355e6',
+    dark: '#718355'
   },
   white: {
-    light: '#FCF8ED',
-    main: '#F9F1DC',
-    dark: '#F6EACB',
+    light: '#f5f3f4',
+    main: '#f5f3f4',
+    dark: '#f5f3f4',
+  },
+  black: {
+    light: '#161a1d80',
+    main: '#161a1dbf',
+    dark: '#161a1d'
   },
   error: {
     light: red[100],
@@ -30,9 +35,8 @@ export const MuiTheme = createMuiTheme({
   },
   typography: {
     allVariants: {
-      color: '#373842'
-    },
-    fontSize: 16
+      color: theme.black.dark
+    }
   },
   overrides: {
     MuiTypography: {
@@ -49,33 +53,33 @@ export const MuiTheme = createMuiTheme({
     MuiOutlinedInput: {
       root: {
         "&:hover:not($disabled):not($focused):not($error) $notchedOutline": {
-          border: "2px solid",
-          borderColor: theme.primary.main
+          border: `2px solid ${theme.black.light}`,
         },
         "& $notchedOutline": {
-          borderColor: theme.primary.main
+          borderColor: theme.black.light
         },
         "&$focused $notchedOutline": {
-          borderColor: theme.primary.dark
+          borderColor: theme.black.light
         }
       }
     },
     MuiFormLabel: {
       root: {
-        color: theme.primary.main,
+        fontSize: '1rem',
+        color: theme.black.main,
         '&$focused': {
-          color: theme.primary.dark
+          color: theme.black.main
         }
       }
     },
     MuiInputBase: {
       root: {
-        color: theme.primary.dark,
+        color: theme.black.dark,
       }
     },
     MuiFormHelperText: {
       root: {
-        color: theme.primary.dark,
+        color: theme.black.main,
         marginTop: '20px'
       },
       contained: {
@@ -85,13 +89,14 @@ export const MuiTheme = createMuiTheme({
     },
     MuiButton: {
       outlinedPrimary: {
-        border: `1px solid ${theme.primary.main}`,
+        border: `1px solid ${theme.black.main}`,
+        color: theme.black.dark,
         "&:hover": {
-          backgroundColor: theme.primary.light,
+          borderColor: theme.secondary.dark,
+          backgroundColor: theme.secondary.dark,
           color: theme.white.light
         }
-      },
-      
+      }
     }
   }
 });

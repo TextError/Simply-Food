@@ -13,22 +13,23 @@ const StyledContact = styled.main`
     & > article {
       & > h1 {
         margin-bottom: revert;
-        color: var(--darkPrimary);
+        color: var(--secondary);
       };
       & > h2 {
         margin-bottom: 20px;
       };
       & > p {
         display: flex;
-        &  > span {
+        margin-bottom: 5px;
+        & > span {
           padding: 0 5px;
           width: 75px;
-        }
-      }
+        };
+      };
     };
     & > form {
       flex-direction: column;
-      & > div, > button{
+      & > div, > button {
         margin-top: 10px;
       };
       & > button {
