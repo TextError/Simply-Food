@@ -20,8 +20,8 @@ const Footer: React.FC = () => {
         </CardMedia>
         <Grid item>
           { isMobile && <WebDev /> }
-          <a href='https://github.com/TextError' target='_blank' rel="noreferrer"><i className="fab fa-github" /></a>
-          <a href='https://www.linkedin.com/in/raul-calin-savin-22682516b/' target='_blank' rel="noreferrer"><i className="fab fa-linkedin-in"></i></a>
+          <a href='https://github.com/TextError' target='_blank' aria-label="Github" rel="noreferrer"><i className="fab fa-github" /></a>
+          <a href='https://www.linkedin.com/in/raul-calin-savin-22682516b/' target='_blank' aria-label="Linkedin" rel="noreferrer"><i className="fab fa-linkedin-in"></i></a>
         </ Grid>
       </Grid>
       <Grid container item sm={8} xs={12} component='section'>

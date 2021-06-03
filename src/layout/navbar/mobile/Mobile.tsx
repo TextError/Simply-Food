@@ -26,7 +26,7 @@ const Mobile: React.FC = () => {
         <span className='bottom'></span>
       { isOpen && <div className='caret'><i /></div> }
       </StyledMobile>
-      <Drawer data-testid='drawer' open={isOpen} onClose={onToggle}>
+      <Drawer open={isOpen} onClose={onToggle}>
         <List onClick={onToggle}>
           <MuiLinks />
         </List>

@@ -53,13 +53,13 @@ export const MuiTheme = createMuiTheme({
     MuiOutlinedInput: {
       root: {
         "&:hover:not($disabled):not($focused):not($error) $notchedOutline": {
-          border: `2px solid ${theme.black.light}`,
+          border: `2px solid ${theme.black.main}`,
         },
         "& $notchedOutline": {
-          borderColor: theme.black.light
+          borderColor: theme.black.main
         },
         "&$focused $notchedOutline": {
-          borderColor: theme.black.light
+          borderColor: theme.black.main
         }
       }
     },
@@ -92,8 +92,8 @@ export const MuiTheme = createMuiTheme({
         border: `1px solid ${theme.black.main}`,
         color: theme.black.dark,
         "&:hover": {
-          borderColor: theme.secondary.dark,
-          backgroundColor: theme.secondary.dark,
+          borderColor: theme.primary.main,
+          backgroundColor: theme.primary.main,
           color: theme.white.light
         }
       }
