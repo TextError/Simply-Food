@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import validateForm from './validateForm';
 import isEmpty from '../../../../utils/isEmpty';
 
 import { Button, Grid } from '@material-ui/core';
-import Input from '../common/Input';
 import TextArea from '../common/TextArea';
+import Input from '../common/Input';
 
 const Form: React.FC = () => {
   const [state, setState] = useState({ name: '', email: '', message: '' });
@@ -20,7 +21,9 @@ const Form: React.FC = () => {
 
   const onSubmit = (e:React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-
+    const { errors, isValid } = validateForm(state);
+    if(!isValid) return setError({ ...error, ...errors });
+    
   };
   
   return (
