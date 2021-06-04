@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Grid, Typography } from '@material-ui/core';
 
-const Text: React.FC = () => (
+const Text: React.FC = memo(() => (
   <Grid component='article' xs={12} item >
     <Typography variant='h1' color='secondary'>Hello!</Typography>
     <Typography variant='h2' color='secondary'>Get in Touch</Typography>
@@ -22,6 +22,6 @@ const Text: React.FC = () => (
       <a href='https://www.linkedin.com/in/raul-calin-savin-22682516b/' target='_blank' rel="noreferrer"></a>
     </Typography>
   </Grid>
-)
+));
 
 export default Text;
