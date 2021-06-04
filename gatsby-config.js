@@ -24,13 +24,13 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
       options: {},
     },
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        google: {
-          families: ['Roboto:300,400'],
-        }
-      }
-    }
+    // {
+    //   resolve: 'gatsby-plugin-web-font-loader',
+    //   options: {
+    //     google: {
+    //       families: ['Roboto:300,400'],
+    //     }
+    //   }
+    // }
   ],
 }
