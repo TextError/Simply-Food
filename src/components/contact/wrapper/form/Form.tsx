@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
+import validateForm from './validateForm';
 import isEmpty from '../../../../utils/isEmpty';
 
 import { Button, Grid } from '@material-ui/core';
-import Input from '../common/Input';
 import TextArea from '../common/TextArea';
+import Input from '../common/Input';
+
+const encode = (data: IData) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
 
 const Form: React.FC = () => {
   const [state, setState] = useState({ name: '', email: '', message: '' });
@@ -20,11 +27,27 @@ const Form: React.FC = () => {
 
   const onSubmit = (e:React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
+    const { errors, isValid } = validateForm(state);
+    if(!isValid) return setError({ ...error, ...errors });
 
+    const body = encode({ 'form-name': 'contact', name, email, message });
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body,
+    })
+    .then(() => setState({ name: '', email: '', message: '' }))
+    .catch(error => alert(error))
   };
   
   return (
-    <Grid component='form' xs={12} container onSubmit={onSubmit} noValidate >
+    <Grid 
+      xs={12} container item onSubmit={onSubmit}
+      component='form' method="post" name="contact" data-netlify="true" data-netlify-honeypot="bot-field" noValidate hidden
+    >
+      {/* hidden form field neccessary for netlify form submission */}
+      <input type="hidden" name="contact" value="contact" />
       <Input
         label={'Name'}
         name='name'
@@ -55,6 +78,13 @@ const Form: React.FC = () => {
       <Button type='submit' variant='outlined' color='primary' >Submit</Button>
     </Grid>
   );
+};
+
+interface IData {
+  [key: string]: string
+  name: string
+  email: string
+  message: string
 };
 
 export default Form;
