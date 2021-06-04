@@ -25,9 +25,9 @@ const validateForm = ({ name, email, message }: IProps): IReturn=> {
   email = !isEmpty(email) ? email : '';
   message = !isEmpty(message) ? message : '';
 
-  if(Validator.isLength(name, { min: 1, max: 50 })) errors.name = 'Name is invalid!';
-  if (!Validator.isEmail(email)) errors.email = 'Email is invalid!';
-  if(!Validator.isLength(message, { min: 10, max: 500 })) errors.message = 'Message is invalid!';
+  if(!Validator.isLength(name, { min: 2, max: 50 })) errors.name = 'Name field is invalid!';
+  if (!Validator.isEmail(email)) errors.email = 'Email field is invalid!';
+  if(!Validator.isLength(message, { min: 10, max: 500 })) errors.message = 'Message field is invalid!';
 
 
   if (Validator.isEmpty(name)) errors.name = 'Name field is required!';
