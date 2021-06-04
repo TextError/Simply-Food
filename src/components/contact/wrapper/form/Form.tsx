@@ -30,12 +30,10 @@ const Form: React.FC = () => {
     const { errors, isValid } = validateForm(state);
     if(!isValid) return setError({ ...error, ...errors });
 
-    const body = encode({ 'form-name': 'contact', name, email, message });
-
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body,
+      body: encode({ 'form-name': 'contact', name, email, message }),
     })
     .then(() => setState({ name: '', email: '', message: '' }))
     .catch(error => alert(error))
@@ -47,7 +45,7 @@ const Form: React.FC = () => {
       component='form' method="post" name="contact" data-netlify="true" data-netlify-honeypot="bot-field" noValidate hidden
     >
       {/* hidden form field neccessary for netlify form submission */}
-      <input type="hidden" name="contact" value="contact" />
+      <input name="form-name" value="contact" hidden />
       <Input
         label={'Name'}
         name='name'
@@ -55,7 +53,7 @@ const Form: React.FC = () => {
         onChange={onChange}
         onFocus={onFocus}
         error={error.name}
-        type='name'
+        type='text'
       />
       <Input
         label={'Email'}
