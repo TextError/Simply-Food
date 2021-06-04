@@ -42,11 +42,10 @@ const Form: React.FC = () => {
   return (
     <Grid 
       xs={12} container item onSubmit={onSubmit}
-      component='form' method="post" name="contact-form" data-netlify="true" data-netlify-honeypot="bot-field" noValidate hidden
+      component='form' method="post" name="contact" data-netlify="true" data-netlify-honeypot="bot-field" noValidate
     >
       {/* hidden form field neccessary for netlify form submission */}
-      <input name="form-name" value="contact-form" hidden readOnly/>
-      <input name="bot-field" onChange={onChange} hidden />
+      <input name="form-name" value="contact" hidden readOnly/>
       <Input
         label={'Name'}
         name='name'
