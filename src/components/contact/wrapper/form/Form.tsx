@@ -10,7 +10,7 @@ const encode = (data: IData) => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
-}
+};
 
 const Form: React.FC = () => {
   const [state, setState] = useState({ name: '', email: '', message: '' });
@@ -41,11 +41,12 @@ const Form: React.FC = () => {
   
   return (
     <Grid 
-      xs={12} container item onSubmit={onSubmit}
-      component='form' method="post" name="contact" data-netlify="true" data-netlify-honeypot="bot-field" noValidate
+      xs={12} container item component='form' onSubmit={onSubmit}
+      method="post" name="contact" data-netlify="true" data-netlify-honeypot="bot-field" 
+      noValidate
     >
       {/* hidden form field neccessary for netlify form submission */}
-      <input name="form-name" value="contact" hidden readOnly/>
+      <input type="hidden" name="form-name" value="contact"></input>
       <Input
         label={'Name'}
         name='name'
