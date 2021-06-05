@@ -6,19 +6,11 @@ import { MuiTheme } from '../material-ui/theme';
 
 import Base from '../styled-components/Base';
 
-import { Provider } from 'react-redux';
-import { persistor, store } from '../redux/store';
-import { PersistGate } from 'redux-persist/integration/react';
-
 export const Wrapper: React.FC<IProps> = ({ element }) => (
   <ThemeProvider theme={MuiTheme}>
     <CssBaseline />
     <Base />
-    <Provider store={store}>
-      <PersistGate persistor={persistor}>
-        {element}
-      </PersistGate>
-    </Provider>
+    {element}
   </ThemeProvider>
 );
 
