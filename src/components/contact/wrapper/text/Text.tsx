@@ -19,7 +19,7 @@ const Text: React.FC = memo(() => (
     <Typography>
       ⟶
       <span>Linkedin:</span>
-      <a href='https://www.linkedin.com/in/raul-calin-savin-22682516b/' target='_blank' rel="noreferrer"></a>
+      <a href='https://linkedin.com/in/texterror' target='_blank' rel="noreferrer">https://linkedin.com/in/texterror</a>
     </Typography>
   </Grid>
 ));
